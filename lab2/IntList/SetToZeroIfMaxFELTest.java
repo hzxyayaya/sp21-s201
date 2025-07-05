@@ -1,6 +1,7 @@
 package IntList;
 
 import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 public class SetToZeroIfMaxFELTest {
@@ -25,4 +26,25 @@ public class SetToZeroIfMaxFELTest {
         IntListExercises.setToZeroIfMaxFEL(L);
         assertEquals("0 -> 0 -> 35 -> 0 -> 10 -> 0", L.toString());
     }
+
+    @Test
+    public void testFELDigit1() {
+        int a = 10;
+        boolean actual = IntListExercises.firstDigitEqualsLastDigit(a);
+        assertFalse(actual);
+    }
+    @Test
+    public void testFELDigit2() {
+        int a = 23;
+        boolean actual = IntListExercises.firstDigitEqualsLastDigit(a);
+        assertFalse(actual);
+    }
+    @Test
+    public void testFELDigit3() {
+        int a = 44;
+        boolean actual = IntListExercises.firstDigitEqualsLastDigit(a);
+        assertTrue(actual);
+    }
+
+
 }
